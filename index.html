@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title Page-->
+    <title>Dashboard</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <!-- <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all"> -->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <!-- DateRange PIcker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<!--Multi select-->
+<!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script> -->
+
+
+
+</head>
+
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/a8cad0ae-56c9-42a0-ae62-e7d25042b6d9_200x200.png" style="height: 150px; width: 200px;" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-tachometer-alt"></i><strong>Dashboard</strong></a>
+                        </li>
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="#">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fas fa-question"></i>&nbsp;<strong>FAQ</strong></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <!-- <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button> -->
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap">    
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-notifications"></i>
+                                        <span class="quantity">3</span>
+                                        <div class="notifi-dropdown js-dropdown">
+                                            <!-- <div class="notifi__item">
+                                                <div class="bg-c1 img-cir img-40">
+                                                    <i class="zmdi zmdi-email-open"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a email notification</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="notifi__footer">
+                                                <a href="#">All notifications</a>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="images/avt.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">john doe</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="images/avt.jpg" alt="John Hancock" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">john doe</a>
+                                                    </h5>
+                                                    <span class="email">johndoe@example.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        
+                        <div class="row m-t-25">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <img height="70px" width="70px" src="https://images.vexels.com/media/users/3/128132/isolated/preview/fa3b9aad78a9db81459bd03294a0f985-flat-laptop-icon-design-by-vexels.png"/>
+                                            </div>
+                                            <div class="text">
+                                                <h2>10368</h2>
+                                                <span>Application Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c2">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <img src="https://img.icons8.com/cotton/64/000000/test-tube.png"/>
+                                            </div>
+                                            <div class="text">
+                                                <h2>388,688</h2>
+                                                <span>No Of Test Cases</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c3">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="65" height="65"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M10.75,35.83333h150.5v103.91667h-150.5z" fill="#1abc9c"></path><path d="M86,111.08333c-9.8951,0 -17.91667,8.02156 -17.91667,17.91667c0,9.8951 8.02156,17.91667 17.91667,17.91667c9.8951,0 17.91667,-8.02156 17.91667,-17.91667c0,-9.8951 -8.02156,-17.91667 -17.91667,-17.91667z" fill="#1abc9c"></path><path d="M86,118.25c-5.93706,0 -10.75,4.81294 -10.75,10.75c0,5.93706 4.81294,10.75 10.75,10.75c5.93706,0 10.75,-4.81294 10.75,-10.75c0,-5.93706 -4.81294,-10.75 -10.75,-10.75z" fill="#ffffff"></path><path d="M143.33333,25.08333l-53.75,10.75h-7.16667l-53.75,-10.75l-7.16667,17.91667v86h129v-86z" fill="#cccccc"></path><path d="M28.66667,118.25358h53.75v10.74642h7.16667v-10.74642l53.75,-0.00358l7.16667,10.75h-129z" fill="#cccccc"></path><path d="M143.33333,25.08333c0,0 -53.75,0 -53.75,10.75c0,10.75 0,93.16667 0,93.16667c0,-10.75 53.75,-10.75 53.75,-10.75zM28.66667,25.08333c0,0 53.75,0 53.75,10.75c0,10.75 0,93.16667 0,93.16667c0,-10.75 -53.75,-10.75 -53.75,-10.75z" fill="#9b59b6"></path><path d="M82.41667,35.83333h7.16667v93.16667h-7.16667z" fill="#cccccc"></path></g></g></svg>
+                                            </div>
+                                            <div class="text">
+                                                <h2>1,086</h2>
+                                                <span>Active Pages</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c4">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="65" height="65"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M150.5,44.06067l-6.30667,-11.34483l-16.04258,4.81958l-3.28233,-16.03542h-13.23325l-3.27158,15.9315l-15.89567,-4.90558l-6.39267,11.29825l11.96833,9.847l-12.04358,9.76458l6.30667,11.34483l16.04258,-4.81958l3.28233,16.039h13.23325l3.27158,-15.9315l15.8885,4.902l6.39625,-11.29825l-11.96475,-9.847zM134.80142,53.75c0,8.90458 -7.41392,16.12142 -16.55142,16.12142c-9.1375,0 -16.55142,-7.21683 -16.55142,-16.12142c0,-8.90817 7.41392,-16.125 16.55142,-16.125c9.1375,0 16.55142,7.21683 16.55142,16.125z" fill="#e74c3c"></path><path d="M141.54167,53.75c0,-12.86417 -10.4275,-23.29167 -23.29167,-23.29167c-12.86417,0 -23.29167,10.4275 -23.29167,23.29167c0,12.86417 10.4275,23.29167 23.29167,23.29167c12.86417,0 23.29167,-10.4275 23.29167,-23.29167zM129,53.75c0,5.94117 -4.816,10.75 -10.75,10.75c-5.934,0 -10.75,-4.80883 -10.75,-10.75c0,-5.934 4.816,-10.75 10.75,-10.75c5.934,0 10.75,4.816 10.75,10.75z" fill="#e74c3c"></path><g fill="#34495e"><path d="M100.33333,99.24042l-7.70417,-13.86392l-19.60083,5.88742l-4.0205,-19.59725h-16.18233l-3.99542,19.47542l-19.42525,-5.99492l-7.81525,13.81017l14.62717,12.03642l-14.71675,11.9325l7.70417,13.86392l19.60083,-5.891l4.0205,19.60083h16.18233l3.99542,-19.47183l19.42167,5.99133l7.81167,-13.81017l-14.62358,-12.03642zM81.141,111.08333c0,10.88617 -9.0515,19.70833 -20.22433,19.70833c-11.17283,0 -20.22433,-8.82217 -20.22433,-19.70833c0,-10.88617 9.0515,-19.70833 20.22433,-19.70833c11.17283,0 20.22433,8.82217 20.22433,19.70833z"></path><path d="M89.58333,111.08333c0,-15.83117 -12.8355,-28.66667 -28.66667,-28.66667c-15.83117,0 -28.66667,12.8355 -28.66667,28.66667c0,15.83117 12.8355,28.66667 28.66667,28.66667c15.83117,0 28.66667,-12.8355 28.66667,-28.66667zM75.25,111.08333c0,7.91917 -6.41775,14.33333 -14.33333,14.33333c-7.91558,0 -14.33333,-6.41417 -14.33333,-14.33333c0,-7.91558 6.41775,-14.33333 14.33333,-14.33333c7.91558,0 14.33333,6.41775 14.33333,14.33333z"></path></g></g></g></svg>
+                                            </div>
+                                            <div class="text">
+                                                <h2>$1,060,386</h2>
+                                                <span>Resources</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            
+                            <div class="col-lg-8">
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Average Page Rendering Milestones
+                                    </h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 386px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                               
+                                <div class="au-card au-card--bg-blue au-card-top-countries m-b-40" style="height: 500px;">
+                                    <div class="au-card-inner">
+                                        <div class="row form-group">
+                                            <div class="col col-md-12">
+                                                <label for="select" class=" form-control-label" style="color: black;">Select Application Name</label><br>
+                                            </div>
+                                            <div class="col-12 col-md-12">
+                                                <select name="select" id="select" class="form-control">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-12">
+                                                <label for="select" class=" form-control-label" style="color: black;">Select Page Name</label><br>
+                                            </div><br>
+                                            <div class="col-12 col-md-12">
+                                                <select name="select" id="select" class="form-control">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-12 col-md-12">
+                                                <label for="select" class=" form-control-label" style="color: black;">Select Test Cases</label><br>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <select name="multiple-select" id="multiple-select" multiple="" class="form-control" placeholder="Select Test Cases">
+                                                    <option disabled value="0">Please select Your Test Cases</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                    <option value="4">Option #3</option>
+                                                    <option value="5">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-12">
+                                                <label for="select" class=" form-control-label" style="color: black;">Select Date Range</label><br>
+                                            </div>
+                                            <div class="col-12 col-md-12">
+                                                <input type="text" class="form-control" name="datefilter" value="" />                                   
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row form-group">
+                                            <div class="col-12 col-md-12"></div>
+                                            <button type="button" class="btn btn-success btn-lg btn-block">Get Result</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6" >
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Average Page Rendering Milestones
+                                    </h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 500px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Max, Mean, Min Loading Times
+                                    </h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 500px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Webpage Loading Times
+                                    </h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 500px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Indevidual Page Details</h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 500px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="au-card-title" style="background-image:url('images/bg-title-02.jpg');">
+                                    <div class="bg-overlay bg-overlay--blue"></div>
+                                    <h3>
+                                        <i class="zmdi zmdi-comment-text"></i>Indevidual Page Details</h3>
+                                </div>
+                                <div class="au-card chart-percent-card" style="height: 500px;">
+                                    <div class="au-card-inner">                                        
+                                       Overall Graph
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2020 JohnHancock. All rights reserved. by <a href="">QECoP</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+        $('#multiple-select').select2();
+    });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+        
+          $('input[name="datefilter"]').daterangepicker({
+              autoUpdateInput: false,
+              locale: {
+                  cancelLabel: 'Clear'
+              }
+          });
+        
+          $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+              $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+          });
+        
+          $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+              $(this).val('');
+          });
+        
+        });
+        </script>
+
+    <!-- Jquery JS-->
+    <!-- <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery-ui.min.js"></script> -->
+    <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <!-- <script src="vendor/slick/slick.min.js"> -->
+    </script>
+    <!-- <script src="vendor/wow/wow.min.js"></script> -->
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <!-- <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"> -->
+    </script>
+    <!-- <script src="vendor/counter-up/jquery.waypoints.min.js"></script> -->
+    <!-- <script src="vendor/counter-up/jquery.counterup.min.js"> -->
+    </script>
+    <!-- <script src="vendor/circle-progress/circle-progress.min.js"></script> -->
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <!-- <script src="vendor/chartjs/Chart.bundle.min.js"></script> -->
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
